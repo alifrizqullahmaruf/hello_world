@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp();
+
+// buat rapih click shift + alt + f
+//refactor = ctrl + shift + R
+void main() {
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Apa KAbar Boss'),
+        ),
+      ),
+    ),
+  );
 }
