@@ -11,20 +11,39 @@ void main() {
         ),
         // ini nambahin background color
         // backgroundColor: Colors.blueGrey,
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 38, 51, 232),
-                Color.fromARGB(255, 85, 122, 223),
-              ],
-            ),
-          ),
-          child: const Center(
-            child: Text('Alif'),
-          ),
-        ),
+        body: GradientContainer(),
       ),
     ),
   );
+}
+
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({super.key});
+
+  // const GradientContainer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 38, 51, 232),
+            Color.fromARGB(255, 85, 122, 223),
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      child: const Center(
+        child: Text(
+          'Welcome to App',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
+  }
 }
