@@ -17,6 +17,7 @@ void main() {
   );
 }
 
+// build a widget
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
