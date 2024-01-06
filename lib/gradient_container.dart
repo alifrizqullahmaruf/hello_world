@@ -7,25 +7,36 @@ const endAlignment = Alignment.bottomRight;
 
 // build a widget
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  const GradientContainer.purple({super.key})
+      : color1 = Colors.deepPurple,
+        color2 = Colors.indigo;
+
+  final Color color1;
+  final Color color2;
 
   // const GradientContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 38, 51, 232),
-            Color.fromARGB(255, 85, 122, 223),
+            color1,
+            color2,
           ],
           begin: startAlignment,
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText("Haloo apa kabar boss 😎"),
+      child: Center(
+        child: Image.asset(
+          'assets/dice-5.png',
+          width: 200,
+        ),
+        // child: StyledText("Haloo apa kabar boss 😎"),
       ),
     );
   }

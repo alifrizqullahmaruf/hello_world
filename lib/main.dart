@@ -13,7 +13,7 @@ void main() {
         ),
         // ini nambahin background color
         // backgroundColor: Colors.blueGrey,
-        body: const GradientContainer(),
+        body: const GradientContainer.purple(),
       ),
     ),
   );
