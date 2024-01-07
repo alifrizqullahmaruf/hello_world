@@ -21,23 +21,35 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            color1,
-            color2,
-          ],
-          begin: startAlignment,
-          end: endAlignment,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              color1,
+              color2,
+            ],
+            begin: startAlignment,
+            end: endAlignment,
+          ),
         ),
-      ),
-      child: Center(
-        child: Image.asset(
-          'assets/dice-5.png',
-          width: 200,
-        ),
-        // child: StyledText("Haloo apa kabar boss 😎"),
-      ),
-    );
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/dice-5.png',
+                width: 200,
+              ),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.only(top: 20),
+                  foregroundColor: Colors.white,
+                  textStyle: const TextStyle(fontSize: 28),
+                ),
+                child: const Text("Roll Dice 🎲"),
+              )
+            ],
+          ),
+        ));
   }
 }
