@@ -6,14 +6,11 @@ import 'package:hello_world/gradient_container.dart';
 //refactor = ctrl + shift + R
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("My First App"),
-        ),
         // ini nambahin background color
         // backgroundColor: Colors.blueGrey,
-        body: const GradientContainer.purple(),
+        body: GradientContainer.purple(),
       ),
     ),
   );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/dice_roller.dart';
 import 'package:hello_world/syled_text.dart';
 
 // Membuat variabel
@@ -21,35 +22,19 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              color1,
-              color2,
-            ],
-            begin: startAlignment,
-            end: endAlignment,
-          ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            color1,
+            color2,
+          ],
+          begin: startAlignment,
+          end: endAlignment,
         ),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset(
-                'assets/dice-5.png',
-                width: 200,
-              ),
-              TextButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  padding: const EdgeInsets.only(top: 20),
-                  foregroundColor: Colors.white,
-                  textStyle: const TextStyle(fontSize: 28),
-                ),
-                child: const Text("Roll Dice 🎲"),
-              )
-            ],
-          ),
-        ));
+      ),
+      child: const Center(
+        child: DiceRoller(),
+      ),
+    );
   }
 }
