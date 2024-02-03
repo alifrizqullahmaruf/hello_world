@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/dice_roller.dart';
-import 'package:hello_world/syled_text.dart';
 
 // Membuat variabel
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
-// build a widget
+// build a widget stateless unutk tampilan yang tidak berubah
 class GradientContainer extends StatelessWidget {
   const GradientContainer(this.color1, this.color2, {super.key});
 
@@ -22,7 +21,9 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
+      // mendekorasikan dalam container
       decoration: BoxDecoration(
+        // Mendefinisaikan linear garisnya
         gradient: LinearGradient(
           colors: [
             color1,
@@ -32,6 +33,7 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
+      // menempatkan anaknya widgetnya di tengah container
       child: const Center(
         child: DiceRoller(),
       ),
